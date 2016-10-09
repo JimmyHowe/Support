@@ -6,7 +6,6 @@ package com.jimmyhowe.support.stores;
 
 import com.jimmyhowe.support.contracts.Cleanable;
 import com.jimmyhowe.support.contracts.Countable;
-import com.jimmyhowe.support.exceptions.ValueStoreException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,23 +41,6 @@ public class ValueStore implements Cleanable, Countable
     public ValueStore(List<String> strings)
     {
         this.data = strings;
-    }
-
-    public static String UpdateThing(ValueStore columns, ValueStore values)
-    {
-        ValueStore vs = new ValueStore();
-
-        if ( columns.count() != values.count() )
-        {
-            throw new ValueStoreException("Some thing shit itself");
-        }
-
-        for ( int i = 0; i < columns.count(); i++ )
-        {
-            vs.add(columns.get(i) + "='" + values.get(i) + "'");
-        }
-
-        return vs.toCsv();
     }
 
     /**

@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="Support:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Support_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Support.jar">
+        <element id="module-output" name="Support" />
+        <element id="module-test-output" name="Support" />
+      </element>
+      <element id="library" level="module" name="JUnit4" module-name="Support" />
+    </root>
+  </artifact>
+</component>

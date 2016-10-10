@@ -1,4 +1,10 @@
 Manifest-Version: 1.0
 Class-Path: junit-4.12.jar hamcrest-core-1.3.jar
 Main-Class: 
-
+Name: jimmyhowe/support/
+Specification-Title: JimmyHowe.com Java Support Package
+Specification-Version: 1.0b
+Specification-Vendor: JimmyHowe.com 2016
+Implementation-Title: jimmyhowe.support
+Implementation-Version: Build 1 Beta
+Implementation-Vendor: JimmyHowe.com

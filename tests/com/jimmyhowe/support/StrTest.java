@@ -2,6 +2,9 @@ package com.jimmyhowe.support;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -25,5 +28,16 @@ public class StrTest
     public void camelCaseToSnakeCase() throws Exception
     {
         assertEquals("camel_case", Str.CamelCaseToSnakeCase("CamelCase"));
+    }
+
+    @Test
+    public void toCsv() throws Exception
+    {
+        List<String> list = new ArrayList<>();
+
+        list.add("Hello");
+        list.add("World");
+
+        assertEquals("Hello, World", Str.toCsv(list));
     }
 }

@@ -1,5 +1,8 @@
 package com.jimmyhowe.support;
 
+import java.util.List;
+import java.util.StringJoiner;
+
 /**
  * String Utility Helper
  */
@@ -55,5 +58,17 @@ public class Str
     public static String CamelCaseToSnakeCase(String camelCase)
     {
         return Str.CamelCaseToLowerCaseWords(camelCase).replace(' ', '_');
+    }
+
+    /**
+     * Convert String Array to CSV Format
+     */
+    public static String toCsv(List<String> data)
+    {
+        StringJoiner stringJoiner = new StringJoiner(", ");
+
+        data.forEach(stringJoiner::add);
+
+        return stringJoiner.toString();
     }
 }

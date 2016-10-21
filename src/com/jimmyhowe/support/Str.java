@@ -63,9 +63,22 @@ public class Str
     /**
      * Convert String Array to CSV Format
      */
-    public static String toCsv(List<String> data)
+    public static String toCsv(List<String> list)
     {
-        StringJoiner stringJoiner = new StringJoiner(", ");
+        return listSeperator(list, ", ");
+    }
+
+    public static String toSpaceSeparated(List<String> list)
+    {
+        return listSeperator(list, " ");
+    }
+
+    /**
+     * Convert String Array to CSV Format
+     */
+    private static String listSeperator(List<String> data, String separator)
+    {
+        StringJoiner stringJoiner = new StringJoiner(separator);
 
         data.forEach(stringJoiner::add);
 

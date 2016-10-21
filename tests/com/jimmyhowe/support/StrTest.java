@@ -40,4 +40,15 @@ public class StrTest
 
         assertEquals("Hello, World", Str.toCsv(list));
     }
+
+    @Test
+    public void toSpaceSeparated() throws Exception
+    {
+        List<String> list = new ArrayList<>();
+
+        list.add("Hello");
+        list.add("World");
+
+        assertEquals("Hello World", Str.toSpaceSeparated(list));
+    }
 }

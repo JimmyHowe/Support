@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -50,5 +51,16 @@ public class StrTest
         list.add("World");
 
         assertEquals("Hello World", Str.toSpaceSeparated(list));
+    }
+
+    @Test
+    public void explode() throws Exception
+    {
+        String[] expected = new String[2];
+
+        expected[0] = "Hello";
+        expected[1] = "World";
+
+        assertArrayEquals(expected, Str.expolode("Hello World", " "));
     }
 }

@@ -65,23 +65,28 @@ public class Str
      */
     public static String toCsv(List<String> list)
     {
-        return listSeperator(list, ", ");
+        return listSeparator(list, ", ");
     }
 
     public static String toSpaceSeparated(List<String> list)
     {
-        return listSeperator(list, " ");
+        return listSeparator(list, " ");
     }
 
     /**
      * Convert String Array to CSV Format
      */
-    private static String listSeperator(List<String> data, String separator)
+    private static String listSeparator(List<String> data, String separator)
     {
         StringJoiner stringJoiner = new StringJoiner(separator);
 
         data.forEach(stringJoiner::add);
 
         return stringJoiner.toString();
+    }
+
+    public static String[] expolode(String string, String regex)
+    {
+        return string.split(regex);
     }
 }

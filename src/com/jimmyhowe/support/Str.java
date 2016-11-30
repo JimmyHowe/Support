@@ -95,4 +95,33 @@ public class Str
     {
         return string.split(regex);
     }
+
+    /**
+     * @param strings Array of Strings
+     *
+     * @return Imploded Array
+     */
+    public static String implode(String[] strings)
+    {
+        return implode(strings, " ");
+    }
+
+    /**
+     * @param strings Array of Strings
+     *
+     * @return Imploded Array
+     */
+    public static String implode(String[] strings, String delimiter)
+    {
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i < strings.length; i++) {
+            builder.append(strings[i]);
+            if (i != strings.length - 1) {
+                builder.append(delimiter);
+            }
+        }
+
+        return builder.toString();
+    }
 }

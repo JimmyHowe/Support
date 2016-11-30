@@ -63,4 +63,30 @@ public class StrTest
 
         assertArrayEquals(expected, Str.explode("Hello World", " "));
     }
+
+    @Test
+    public void implode() throws Exception
+    {
+        String expected = "Hello World";
+
+        String[] arrayOfStrings = new String[2];
+
+        arrayOfStrings[0] = "Hello";
+        arrayOfStrings[1] = "World";
+
+        assertEquals(expected, Str.implode(arrayOfStrings));
+    }
+
+    @Test
+    public void implodeWithDelimiter() throws Exception
+    {
+        String expected = "Hello.World";
+
+        String[] arrayOfStrings = new String[2];
+
+        arrayOfStrings[0] = "Hello";
+        arrayOfStrings[1] = "World";
+
+        assertEquals(expected, Str.implode(arrayOfStrings, "."));
+    }
 }

@@ -61,6 +61,6 @@ public class StrTest
         expected[0] = "Hello";
         expected[1] = "World";
 
-        assertArrayEquals(expected, Str.expolode("Hello World", " "));
+        assertArrayEquals(expected, Str.explode("Hello World", " "));
     }
 }

@@ -85,7 +85,13 @@ public class Str
         return stringJoiner.toString();
     }
 
-    public static String[] expolode(String string, String regex)
+    /**
+     * @param string String
+     * @param regex  RegEx
+     *
+     * @return Array of Strings
+     */
+    public static String[] explode(String string, String regex)
     {
         return string.split(regex);
     }

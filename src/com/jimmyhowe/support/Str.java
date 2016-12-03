@@ -86,14 +86,14 @@ public class Str
     }
 
     /**
-     * @param string String
-     * @param regex  RegEx
+     * @param delimiter Delimiter
+     * @param string    String
      *
      * @return Array of Strings
      */
-    public static String[] explode(String string, String regex)
+    public static String[] explode(String delimiter, String string)
     {
-        return string.split(regex);
+        return string.split(delimiter);
     }
 
     /**
@@ -103,21 +103,46 @@ public class Str
      */
     public static String implode(String[] strings)
     {
-        return implode(strings, " ");
+        return implode(" ", strings);
     }
 
     /**
-     * @param strings Array of Strings
+     * @param delimiter Delimiter
+     * @param strings   Array of Strings
      *
      * @return Imploded Array
      */
-    public static String implode(String[] strings, String delimiter)
+    public static String implode(String delimiter, String[] strings)
     {
         StringBuilder builder = new StringBuilder();
 
-        for (int i = 0; i < strings.length; i++) {
+        for ( int i = 0; i < strings.length; i++ )
+        {
             builder.append(strings[i]);
-            if (i != strings.length - 1) {
+            if ( i != strings.length - 1 )
+            {
+                builder.append(delimiter);
+            }
+        }
+
+        return builder.toString();
+    }
+
+    /**
+     * @param delimiter Delimiter
+     * @param strings   Array of Strings
+     *
+     * @return Imploded Array
+     */
+    public static String implode(String delimiter, List<String> strings)
+    {
+        StringBuilder builder = new StringBuilder();
+
+        for ( int i = 0; i < strings.size(); i++ )
+        {
+            builder.append(strings.get(i));
+            if ( i != strings.size() - 1 )
+            {
                 builder.append(delimiter);
             }
         }

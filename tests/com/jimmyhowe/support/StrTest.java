@@ -61,7 +61,13 @@ public class StrTest
         expected[0] = "Hello";
         expected[1] = "World";
 
-        assertArrayEquals(expected, Str.explode("Hello World", " "));
+        assertArrayEquals(expected, Str.explode(" ", "Hello World"));
+
+//        expected = new String[1];
+//
+//        expected[0] = "Hello World";
+//
+//        assertArrayEquals(expected, Str.explode(".", "Hello World"));
     }
 
     @Test
@@ -87,6 +93,6 @@ public class StrTest
         arrayOfStrings[0] = "Hello";
         arrayOfStrings[1] = "World";
 
-        assertEquals(expected, Str.implode(arrayOfStrings, "."));
+        assertEquals(expected, Str.implode(".", arrayOfStrings));
     }
 }

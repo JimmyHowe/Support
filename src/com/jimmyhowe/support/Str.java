@@ -93,7 +93,9 @@ public class Str
      */
     public static String[] explode(String delimiter, String string)
     {
-        return string.split(delimiter);
+        String[] split = string.split(delimiter);
+
+        return (split.length > 0) ? split : new String[]{ string };
     }
 
     /**

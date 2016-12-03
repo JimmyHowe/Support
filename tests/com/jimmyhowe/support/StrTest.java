@@ -63,11 +63,11 @@ public class StrTest
 
         assertArrayEquals(expected, Str.explode(" ", "Hello World"));
 
-//        expected = new String[1];
-//
-//        expected[0] = "Hello World";
-//
-//        assertArrayEquals(expected, Str.explode(".", "Hello World"));
+        expected = new String[1];
+
+        expected[0] = "Hello World";
+
+        assertArrayEquals(expected, Str.explode(".", "Hello World"));
     }
 
     @Test

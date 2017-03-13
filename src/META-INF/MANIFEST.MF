@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: jimmyhowe.support
+Implementation-Version: Build 1 Beta
+Specification-Vendor: JimmyHowe.com 2016
+Name: jimmyhowe/support/
+Specification-Title: JimmyHowe.com Java Support Package
+Specification-Version: 1.0b
+Implementation-Vendor: JimmyHowe.com
+

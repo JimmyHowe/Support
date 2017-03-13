@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Support:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Support_jar</output-path>
+    <root id="archive" name="Support.jar">
+      <element id="module-output" name="Support" />
+    </root>
+  </artifact>
+</component>

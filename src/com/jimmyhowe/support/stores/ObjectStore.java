@@ -1,34 +1,47 @@
 package com.jimmyhowe.support.stores;
 
 import com.jimmyhowe.support.contracts.Countable;
+import com.jimmyhowe.support.contracts.DataParameterAccess;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Stores Objects
  */
-public class ObjectStore implements Countable
+public class ObjectStore implements DataParameterAccess, Countable
 {
-    protected ArrayList<Object> data = new ArrayList<>();
+    /**
+     * Data
+     */
+    private List<Object> data = new ArrayList<>();
 
-    public ArrayList<Object> data()
-    {
-        return data;
-    }
-
-    public Object data(int i)
-    {
-        return data().get(i);
-    }
-
+    /**
+     * @param object
+     */
     public void put(Object object)
     {
         this.data.add(object);
     }
 
-    public boolean isEmpty()
+    /**
+     * Returns the Data Object
+     */
+    @Override
+    public List data()
     {
-        return data.isEmpty();
+        return data;
+    }
+
+    /**
+     * Helper to get data at index
+     *
+     * @param index Index of value
+     */
+    @Override
+    public Object data(int index)
+    {
+        return data.get(index);
     }
 
     /**
@@ -38,5 +51,13 @@ public class ObjectStore implements Countable
     public int count()
     {
         return this.data.size();
+    }
+
+    /**
+     * @return True or False if empty
+     */
+    public boolean isEmpty()
+    {
+        return data.isEmpty();
     }
 }

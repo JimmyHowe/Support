@@ -49,11 +49,13 @@ public class Collection<T> implements DataParameterAccess, Countable
     }
 
     /**
+     * Returns first element in collection
+     *
      * @return First value in collection
      */
     public T first()
     {
-        return data.get(0);
+        return data.size() != 0 ? data.get(0) : null;
     }
 
     /**

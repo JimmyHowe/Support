@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertNotNull;
+import static junit.framework.TestCase.assertNull;
 
 /**
  * Created by Jimmy on 11/03/2017.
@@ -44,6 +46,15 @@ public class CollectionTest
     {
         assertEquals(1, (int) integersCollection.first());
         assertEquals(3, (int) integersCollection.last());
+    }
+
+    @Test
+    public void it_can_can_handle_first_exception() throws Exception
+    {
+        Collection<Integer> collection = new Collection<>();
+
+        assertNull(collection.first());
+        assertNotNull(integersCollection.first());
     }
 
     @Test

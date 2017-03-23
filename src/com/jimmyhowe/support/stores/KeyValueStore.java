@@ -90,4 +90,9 @@ public class KeyValueStore
     {
         return new ArrayList<>(this.data.values());
     }
+
+    public Map<String, Object> getData()
+    {
+        return data;
+    }
 }

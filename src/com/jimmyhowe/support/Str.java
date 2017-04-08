@@ -151,4 +151,31 @@ public class Str
 
         return builder.toString();
     }
+
+    /**
+     * @param values
+     *
+     * @return
+     */
+    public static String[] stringify(Object... values)
+    {
+        String[] newStrings = new String[values.length];
+
+        for ( int i = 0; i < values.length; i++ )
+        {
+            newStrings[i] = stringify(values[i]);
+        }
+
+        return newStrings;
+    }
+
+    /**
+     * @param value
+     *
+     * @return
+     */
+    public static String stringify(Object value)
+    {
+        return value.toString();
+    }
 }

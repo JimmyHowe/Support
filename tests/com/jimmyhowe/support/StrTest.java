@@ -3,6 +3,7 @@ package com.jimmyhowe.support;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -94,5 +95,22 @@ public class StrTest
         arrayOfStrings[1] = "World";
 
         assertEquals(expected, Str.implode(".", arrayOfStrings));
+    }
+
+    @Test
+    public void stingify() throws Exception
+    {
+        assertEquals("hello", Str.stringify("hello"));
+        assertEquals("123", Str.stringify(123));
+
+        Object[] objects = new Object[2];
+
+        objects[0] = 123;
+        objects[1] = 456;
+
+        System.out.println(Arrays.toString(Str.stringify(objects)));
+
+        assertEquals("123", Str.stringify(objects)[0]);
+        assertEquals("456", Str.stringify(objects)[1]);
     }
 }
